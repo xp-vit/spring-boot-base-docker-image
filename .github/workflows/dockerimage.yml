@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag -t xp-vit/spring-boot-jre:amazoncorretto-11
+      run: docker build . --file Dockerfile --tag xp-vit/spring-boot-jre:amazoncorretto-11
     - name: Publish the Docker image
       run: docker push xp-vit/spring-boot-jre:amazoncorretto-11
