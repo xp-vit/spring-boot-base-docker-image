@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag xpvit/spring-boot-jre:amazoncorretto-11
     - name: Docker hub login
-      run: docker login --username xpvit  -p ${{ DOCKER_HUB_TOKEN }}
+      run: docker login --username xpvit  -p ${{ secrets.DOCKER_HUB_TOKEN }}
     - name: Publish the Docker image
       run: docker push xpvit/spring-boot-jre:amazoncorretto-11
